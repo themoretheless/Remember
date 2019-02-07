@@ -18,12 +18,17 @@ namespace Remember
         private void Application_Startup(object sender, StartupEventArgs e)
         {
 
-            if (e.Args.Contains("debug"))
+            if (e.Args.Contains("-debug"))
             {
                 ConsoleHelpers.ShowWindow();
             }
 
             IServiceCollection serviceCollection = Bootstrap.Configure();
+            serviceCollection.AddLiteDb();
+
+
+
+
             serviceCollection.AddTransient<MainWindow>();
             Provider = serviceCollection.BuildServiceProvider();
 

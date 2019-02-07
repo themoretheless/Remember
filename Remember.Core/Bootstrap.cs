@@ -1,17 +1,18 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using LiteDB;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 
 
 namespace Remember.Core
 {
-    public class Bootstrap
+    public static class Bootstrap
     {
 
         public static IServiceCollection Configure()
         {
 
-            IServiceCollection services = new ServiceCollection();
+            var services = new ServiceCollection();
 
             services.AddLogging(configure =>
             {
@@ -29,5 +30,21 @@ namespace Remember.Core
 
             return services;
         }
+
+
+        public static void AddLiteDb(this IServiceCollection services)
+        {
+            services.AddTransient(o => new LiteRepository("MyData.db"));
+            //services.AddTransient(o => new LiteDatabase("MyData.db"));
+            services.AddTransient(typeof(LiteRepository<>));
+
+            //services.Configure<LiteDatabase>(o => o = "MyData.db");
+            //return services;
+
+
+        }
+
+
+
     }
 }

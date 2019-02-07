@@ -4,18 +4,58 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Remember.Wpf"
+        xmlns:controls="clr-namespace:Remember.Wpf.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="9*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
-        <Label Content="Hello .NET Core!" HorizontalAlignment="Center" VerticalAlignment="Center"
-               FontSize="40"/>
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        IsHitTestVisible="True"
+        Title="MainWindow" Height="300" Width="500">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
 
-        <Button Content="Test" Grid.Row="1" FontSize="20" Click="ButtonTest_Click"/>
-        <Button Content="Exit" Grid.Row="2" FontSize="20" Click="ButtonExit_Click"/>
+        <Storyboard x:Key="DecreaseOpacity">
+            <DoubleAnimation
+                Storyboard.TargetName="CardControls"
+                Storyboard.TargetProperty="Opacity"
+                To="0" Duration="0:0:0.5"  BeginTime="0:0:0.5"/>
+        </Storyboard>
+
+        <Storyboard x:Key="IncreaseOpacity">
+            <DoubleAnimation
+                Storyboard.TargetName="CardControls"
+                Storyboard.TargetProperty="Opacity"
+                To="1" Duration="0:0:0.2"/>
+        </Storyboard>
+
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.MouseEnter">
+            <BeginStoryboard Storyboard="{StaticResource IncreaseOpacity}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Window.MouseLeave">
+            <BeginStoryboard Storyboard="{StaticResource DecreaseOpacity}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid IsHitTestVisible="True" MouseDown="Grid_MouseDown">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <controls:CardControls x:Name="CardControls" Opacity="0"/>
+
+        <Grid Grid.Row="1" Background="#008080">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Content="Test" Grid.Row="1" FontSize="20" Click="ButtonTest_Click"/>
+            <Button Content="Exit" Grid.Row="2" FontSize="20" Click="ButtonExit_Click"/>
+        </Grid>
+
     </Grid>
 </Window>
