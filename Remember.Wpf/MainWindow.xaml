@@ -14,18 +14,19 @@
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
 
-        <Storyboard x:Key="DecreaseOpacity">
-            <DoubleAnimation
-                Storyboard.TargetName="CardControls"
+        <Storyboard x:Key="DecreaseOpacity" TargetName="CardControls">
+            <DoubleAnimation            
                 Storyboard.TargetProperty="Opacity"
-                To="0" Duration="0:0:0.5"  BeginTime="0:0:0.5"/>
+                To="0"
+                Duration="0:0:0.5"
+                BeginTime="0:0:0.5"/>
         </Storyboard>
 
-        <Storyboard x:Key="IncreaseOpacity">
+        <Storyboard x:Key="IncreaseOpacity" TargetName="CardControls">
             <DoubleAnimation
-                Storyboard.TargetName="CardControls"
                 Storyboard.TargetProperty="Opacity"
-                To="1" Duration="0:0:0.2"/>
+                To="1"
+                Duration="0:0:0.2"/>
         </Storyboard>
 
     </Window.Resources>
@@ -50,12 +51,17 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="5*"/>
                 <RowDefinition/>
-                <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Button Content="Test" Grid.Row="1" FontSize="20" Click="ButtonTest_Click"/>
-            <Button Content="Exit" Grid.Row="2" FontSize="20" Click="ButtonExit_Click"/>
-        </Grid>
+            <Grid Grid.Row="2" Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
+                <Button Content="Test" Grid.Column="0" FontSize="20" Click="ButtonTest_Click"/>
+                <Button Content="Exit" Grid.Column="1" FontSize="20" Click="ButtonExit_Click"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

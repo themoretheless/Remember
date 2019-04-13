@@ -6,14 +6,11 @@ using System;
 using System.Linq;
 using System.Windows;
 
-
 namespace Remember
 {
     public partial class App : Application
     {
-
         public static IServiceProvider Provider { get; set; }
-
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
@@ -21,6 +18,7 @@ namespace Remember
             if (e.Args.Contains("-debug"))
             {
                 ConsoleHelpers.ShowWindow();
+                Console.OutputEncoding = System.Text.Encoding.UTF8;
             }
 
             IServiceCollection serviceCollection = Bootstrap.Configure();

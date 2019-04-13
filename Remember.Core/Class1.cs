@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace Remember.Core
 {
+
     public class DbHelper
     {
         public void Create()
@@ -26,7 +27,6 @@ namespace Remember.Core
                     Origin = "Dog",
                     Transcription = "Dog",
                     Translation = "Собака"
-
                 };
 
                 // Create unique index in Name field

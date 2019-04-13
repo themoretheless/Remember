@@ -16,9 +16,9 @@ namespace Remember.Wpf
         private RelayCommand addCommand;
         public RelayCommand AddCommand
             => addCommand ?? (addCommand = new RelayCommand(obj =>
-                {
-                    Console.Write("command test");
-                }));
+            {
+                Console.Write("command test");
+            }));
 
         private readonly ILogger _logger;
         private readonly LiteRepository<CardModel> _cardRepository;
@@ -59,7 +59,9 @@ namespace Remember.Wpf
 
             foreach (var item in result)
             {
-                _logger.LogInformation(item.Translation);
+
+                _logger.LogInformation("чапварпвапр34");
+                _logger.LogInformation($"{item.Transcription} {item.Translation}");
                 _logger.LogInformation(item.BDoc["2"].AsString);
             }
 
@@ -78,8 +80,8 @@ namespace Remember.Wpf
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.ChangedButton == MouseButton.Left)
-                this.DragMove();
+            // if (e.ChangedButton == MouseButton.Left)
+            DragMove();
         }
     }
 

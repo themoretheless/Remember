@@ -8,10 +8,8 @@ namespace Remember.Core
 {
     public static class Bootstrap
     {
-
         public static IServiceCollection Configure()
         {
-
             var services = new ServiceCollection();
 
             services.AddLogging(configure =>
@@ -27,7 +25,6 @@ namespace Remember.Core
                 configure.AddSerilog(log);
             });
 
-
             return services;
         }
 
@@ -40,11 +37,6 @@ namespace Remember.Core
 
             //services.Configure<LiteDatabase>(o => o = "MyData.db");
             //return services;
-
-
         }
-
-
-
     }
 }
