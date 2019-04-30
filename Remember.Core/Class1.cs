@@ -14,7 +14,7 @@ namespace Remember.Core
 
                 var t = new LiteRepository(@"MyData.db");
 
-                var r = t.Query<CardModel>().Where(b=>b.Origin == "Dog") // conditional filter
+                var r = t.Query<CardModel>().Where(b => b.Origin == "Dog") // conditional filter
                 .ToList();
 
                 // Get customer collection
@@ -33,15 +33,15 @@ namespace Remember.Core
                 //col.EnsureIndex(x => x.Origin, true);
 
                 // Insert new customer document (Id will be auto-incremented)
-               // col.Insert(card);
+                // col.Insert(card);
 
                 // Update a document inside a collection
                 //card.Transcription = "Doog";
 
-//                col.Update(card);
+                //                col.Update(card);
 
                 // Use LINQ to query documents (with no index)
-               // var results = col.Find(x => x.Origin == "Dog");
+                // var results = col.Find(x => x.Origin == "Dog");
             }
         }
 
