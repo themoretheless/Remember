@@ -18,7 +18,6 @@ namespace Remember
             if (e.Args.Contains("-debug"))
             {
                 ConsoleHelpers.ShowWindow();
-                Console.OutputEncoding = System.Text.Encoding.UTF8;
             }
 
             IServiceCollection serviceCollection = Bootstrap.Configure();

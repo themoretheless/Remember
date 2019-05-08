@@ -40,7 +40,7 @@ namespace Remember.Comsole
         public static void ShowWindow()
         {
             var handle = GetConsoleWindow();
-
+          
             if (handle == IntPtr.Zero)
             {
                 AllocConsole();
@@ -49,6 +49,8 @@ namespace Remember.Comsole
             {
                 ShowWindow(handle, SW_SHOW);
             }
+
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
         }
 
         public static void HideWindow()
