@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Remember.Comsole;
+using Remember.Console;
 using Remember.Core;
 using Remember.Wpf;
 using System;

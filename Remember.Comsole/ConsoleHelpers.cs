@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace Remember.Comsole
+namespace Remember.Console
 {
     public static class ConsoleHelpers
     {
@@ -50,7 +50,7 @@ namespace Remember.Comsole
                 ShowWindow(handle, SW_SHOW);
             }
 
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            System.Console.OutputEncoding = System.Text.Encoding.UTF8;
         }
 
         public static void HideWindow()

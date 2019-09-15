@@ -17,7 +17,7 @@ namespace Remember.Wpf
         public RelayCommand AddCommand
             => addCommand ?? (addCommand = new RelayCommand(obj =>
             {
-                Console.Write("command test");
+                System.Console.Write("command test");
             }));
 
         private readonly ILogger _logger;
@@ -80,8 +80,8 @@ namespace Remember.Wpf
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            // if (e.ChangedButton == MouseButton.Left)
-            DragMove();
+            if (e.ChangedButton == MouseButton.Left)
+                DragMove();
         }
     }
 

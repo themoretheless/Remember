@@ -4,7 +4,6 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
-    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Remember.Comsole\Remember.Comsole.csproj" />
+    <ProjectReference Include="..\Remember.Comsole\Remember.Console.csproj" />
     <ProjectReference Include="..\Remember.Core\Remember.Core.csproj" />
   </ItemGroup>
 
