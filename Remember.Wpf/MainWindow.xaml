@@ -10,7 +10,8 @@
         AllowsTransparency="True"
         WindowStyle="None"
         IsHitTestVisible="True"
-        Title="MainWindow" Height="300" Width="500">
+        Title="MainWindow" Height="300" Width="500"
+        ResizeMode="NoResize">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
 
