@@ -5,7 +5,7 @@ namespace Remember.Core
 {
     public class LiteRepository<T>
     {
-        protected LiteCollection<T> _collection;
+        protected ILiteCollection<T> _collection;
         protected LiteRepository _repository;
 
         public LiteRepository(LiteRepository repository)
@@ -51,7 +51,7 @@ namespace Remember.Core
             {
 
                 var all = _collection.FindAll();
-                return new List<T>(all);
+                return all;
             }
 
     }

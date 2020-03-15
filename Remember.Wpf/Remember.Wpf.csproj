@@ -2,12 +2,16 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp5.0</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Controls\CardControl.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.UI.Xaml" Version="2.4.0-prerelease.200203002" />
   </ItemGroup>
 
   <ItemGroup>

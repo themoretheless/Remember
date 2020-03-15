@@ -11,7 +11,8 @@
         WindowStyle="None"
         IsHitTestVisible="True"
         Title="MainWindow" Height="300" Width="500"
-        ResizeMode="NoResize">
+        ResizeMode="CanResize"
+        ShowInTaskbar="False">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
 
