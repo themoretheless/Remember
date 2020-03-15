@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Remember.Wpf"
         xmlns:controls="clr-namespace:Remember.Wpf.Controls"
+        xmlns:nf="clr-namespace:Remember.Wpf.NewFolder"
         mc:Ignorable="d"
         Background="Transparent"
         AllowsTransparency="True"
         WindowStyle="None"
         IsHitTestVisible="True"
         Title="MainWindow" Height="300" Width="500"
-        ResizeMode="NoResize">
+        ResizeMode="CanResize"
+        ShowInTaskbar="False" nf:PointerTracker.Enabled="True"  >
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
 
@@ -46,7 +48,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <controls:CardControls x:Name="CardControls" Opacity="0"/>
+        <controls:CardControls x:Name="CardControls" Opacity="0.9"/>
 
 
         <Border Grid.Row="1" BorderThickness="1">         

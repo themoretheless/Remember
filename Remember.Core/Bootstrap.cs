@@ -17,7 +17,7 @@ namespace Remember.Core
                 configure.SetMinimumLevel(LogLevel.Trace);
 
                 var log = new LoggerConfiguration()
-                   .WriteTo.ColoredConsole()
+                   .WriteTo.Console()
                    .WriteTo.File(@"C:\TMP\2_serilog.txt")
                    .CreateLogger();
 

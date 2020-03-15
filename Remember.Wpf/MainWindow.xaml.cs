@@ -12,20 +12,19 @@ namespace Remember.Wpf
 {
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-
         private RelayCommand addCommand;
         public RelayCommand AddCommand
-            => addCommand ?? (addCommand = new RelayCommand(obj =>
+            => addCommand ??= new RelayCommand(obj =>
             {
                 System.Console.Write("command test");
-            }));
+            });
 
         private readonly ILogger _logger;
         private readonly LiteRepository<CardModel> _cardRepository;
 
         public MainWindow(ILogger<MainWindow> logger, LiteRepository<CardModel> cardRepository)
         {
-            this.DataContext = this;
+            DataContext = this;
             InitializeComponent();
             _logger = logger;
             _cardRepository = cardRepository;

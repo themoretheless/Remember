@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Remember.Console", "Remembe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Remember.Core", "Remember.Core\Remember.Core.csproj", "{F1659568-8B9A-4FA1-A41E-79E471A6C7A1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentWPF", "FluentWPF\FluentWPF.csproj", "{4BF0911A-3D38-46E9-986F-5910F7D6F874}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F1659568-8B9A-4FA1-A41E-79E471A6C7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1659568-8B9A-4FA1-A41E-79E471A6C7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1659568-8B9A-4FA1-A41E-79E471A6C7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF0911A-3D38-46E9-986F-5910F7D6F874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF0911A-3D38-46E9-986F-5910F7D6F874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF0911A-3D38-46E9-986F-5910F7D6F874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF0911A-3D38-46E9-986F-5910F7D6F874}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
