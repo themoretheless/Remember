@@ -19,8 +19,6 @@
         <SolidColorBrush x:Key="GreenBrush" Color="{StaticResource GreenColor}" Opacity=".4" />
         <SolidColorBrush x:Key="RedBrush" Color="{StaticResource RedColor}" Opacity=".4" />
 
-
-
         <Storyboard x:Key="IncreaseOpacity" TargetProperty="Background.(SolidColorBrush.Opacity)">
             <DoubleAnimation To="1" Duration="0:0:0.2"/>
         </Storyboard>
@@ -42,9 +40,10 @@
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid x:Name="MainGrid">
                             <VisualStateManager.VisualStateGroups>
+                                
                                 <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal">
-                                        <Storyboard>
+                                    <VisualState x:Name="Normal">                                        
+                                        <Storyboard>     
                                             
                                             <DoubleAnimation Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="pressLight"
                                                          To="0.4" Duration="0:0:0.600">
@@ -57,7 +56,7 @@
                                     </VisualState>
                                     <VisualState x:Name="MouseOver">
                                         <Storyboard>
-
+                                            
                                             <DoubleAnimation Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="pressLight"
                                                          To="1" Duration="0:0:0.600">
                                                 <DoubleAnimation.EasingFunction>
@@ -287,207 +286,29 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-
-
-    <Grid Background="sc#0.001,0,0,0" IsHitTestVisible="True">
-
-        <StackPanel Orientation="Horizontal" >
-        <Button Grid.Column="1"
-                Content="NO"          
-                Margin="0 8 0 8"         
-                Command="{Binding AddCommand}"
-                Background="{StaticResource GreenBrush}"
-                nf:RevealElement.MouseOverBackgroundColor="{StaticResource GreenColor}"
-                Width="200"
-                Style="{StaticResource CardOperationButtonStyle}"
-                />
-
-            <Button Grid.Column="1"
-                Content="NO"          
-                Margin="4 8 0 8"         
-                Command="{Binding AddCommand}"
-                Background="{StaticResource RedBrush}"
-                nf:RevealElement.MouseOverBackgroundColor="{StaticResource RedColor}"
-                Width="200"
-                Style="{StaticResource CardOperationButtonStyle}"
-                />
-
-        </StackPanel>
-    </Grid>
-</UserControl>
-
-
-
-
-
-<!--<UserControl x:Class="Remember.Wpf.Controls.CardControls"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:rrr="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"             
-             mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800">
-  
-    <UserControl.Resources>
-        <SolidColorBrush x:Key="Green" Color="#81e069" Opacity=".1" />
-        <SolidColorBrush x:Key="Red" Color="#fc4242" Opacity=".6" />
-
-        <Storyboard x:Key="IncreaseOpacity" TargetProperty="Background.(SolidColorBrush.Opacity)">
-            <DoubleAnimation To="1" Duration="0:0:0.2"/>
-        </Storyboard>
-
-        <Storyboard x:Key="DecreaseOpacity" TargetProperty="Background.(SolidColorBrush.Opacity)">
-            <DoubleAnimation To="0.7" Duration="0:0:0.2"/>
-        </Storyboard>
-
-        <Storyboard x:Key="RRR" TargetProperty="(FrameworkElement.RenderTransform).(ScaleTransform.ScaleX)">
-            <DoubleAnimation To="0.7" Duration="0:0:0.2"/>
-        </Storyboard>
-
-        <Style x:Key="CardOperationButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="FontSize" Value="15" />
-            <Setter Property="SnapsToDevicePixels" Value="True" />
-
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid x:Name="MainGrid" Background="Transparent" RenderTransformOrigin="0.5 0.5">
-                            <Border x:Name="yyy" Background="{TemplateBinding Background}" BorderThickness="1">
-                                <Border.BorderBrush>
-                                    <SolidColorBrush Color="White" Opacity=".6" />
-                                </Border.BorderBrush>
-                                <Grid>
-                                  
-                                    <ContentPresenter x:Name="ContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                </Grid>
-                            </Border>
-                            <Grid.RenderTransform>
-                                <ScaleTransform/>
-                            </Grid.RenderTransform>
-                        </Grid>
-
-                        <ControlTemplate.Triggers>
-
-
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="yyy" Property="BorderThickness" Value="2"/>
-                            </Trigger>
-
-                            <Trigger Property="IsPressed" Value="True">
-                                
-                                --><!--<Setter Property="RenderTransform">
-                                    <Setter.Value>
-                                        <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
-                                    </Setter.Value>
-                                </Setter>--><!--
-
-                               
-
-                             
-
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <DoubleAnimation
-                                                Duration="0:0:0.05"
-                                                Storyboard.TargetName="MainGrid"
-                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
-                                                To="0.95"/>
-                                            <DoubleAnimation
-                                                Storyboard.TargetName="MainGrid"
-                                                Duration="0:0:0.05"
-                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
-                                                To="0.95"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <DoubleAnimation
-                                                Duration="0:0:0.05"
-                                                Storyboard.TargetName="MainGrid"
-                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
-                                                To="1"/>
-                                            <DoubleAnimation
-                                                Storyboard.TargetName="MainGrid"
-                                                Duration="0:0:0.05"
-                                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
-                                                To="1"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.ExitActions>
-                            </Trigger>
-
-
-                            --><!--<Trigger Property="IsMouseOver" Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <DoubleAnimation
-                                Duration="0:0:0.05"
-                                Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)"
-                                To="0.95"/>
-                                            <DoubleAnimation
-                                Duration="0:0:0.05"
-                                Storyboard.TargetName="ContentPresenter"
-                                Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)"
-                                To="0.95"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard Storyboard="{StaticResource DecreaseOpacity}"/>
-                                </Trigger.ExitActions>
-                            </Trigger>
-
-                            <Trigger Property="IsPressed" Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>                                  
-                                        <Storyboard  RepeatBehavior="Forever" AutoReverse="False">
-                                            <DoubleAnimation                                             
-                                                Storyboard.TargetProperty="(ScaleTransform.ScaleX)"
-                                                To="30.0" Duration="0:0:0.1" AutoReverse="True"
-                                                RepeatBehavior="Forever" />                                            
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-                            </Trigger>--><!--
-
-
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-    </UserControl.Resources>
-
-    <Grid x:Name="GGG">
+   
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
-        --><!--<FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>-->
-        <!--Background="#9081e069"--><!--
-
         <Button Grid.Column="0"
-                Content="&#xE740;"
-                Background="{StaticResource Green}"
-                FontFamily="Segoe MDL2 Assets"
-                Margin="0 8 4 8" 
-                Style="{StaticResource ButtonRevealStyle}"
-          >
-
-        </Button>
-        <Button Grid.Column="1"
-                Content="NO"
-                Background="{StaticResource Red}"
-                Margin="4 8 0 8"         
+                Content="NO"          
+                Margin="0 8 0 8"         
                 Command="{Binding AddCommand}"
-                Style="{StaticResource ButtonRevealStyle}"/>
+                Background="{StaticResource GreenBrush}"
+                nf:RevealElement.MouseOverBackgroundColor="{StaticResource GreenColor}"             
+                Style="{StaticResource CardOperationButtonStyle}"
+                />
+
+        <Button Grid.Column="1"
+            Content="NO"          
+            Margin="4 8 0 8"         
+            Command="{Binding AddCommand}"
+            Background="{StaticResource RedBrush}"
+            nf:RevealElement.MouseOverBackgroundColor="{StaticResource RedColor}"          
+            Style="{StaticResource CardOperationButtonStyle}"
+            />
     </Grid>
-</UserControl>-->
+
+</UserControl>   

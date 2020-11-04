@@ -9,7 +9,6 @@
 
     <Style x:Key="ButtonRevealStyle" TargetType="{x:Type Button}">
         <Setter Property="OverridesDefaultStyle" Value="True" />
-        <!--<Setter Property="Foreground" Value="{DynamicResource SystemBaseHighColorBrush}" />-->
         <Setter Property="Foreground" Value="#86898089" />
         <Setter Property="Background" Value="#80808080" />
         <Setter Property="BorderBrush" Value="{DynamicResource SystemBaseMediumHighColorBrush}" />
@@ -19,8 +18,6 @@
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="local:RevealElement.MouseOverForeground" Value="#86898089" />
-        <!--<Setter Property="local:RevealElement.MouseOverBackground" Value="{Binding Path=Background, RelativeSource={RelativeSource AncestorType={x:Type Button}} }" />-->
-        <!--<Setter Property="local:RevealElement.MouseOverBackground" Value="{Binding Background}" />-->
         <Setter Property="local:RevealElement.MouseOverBackground" Value="{Binding RelativeSource={RelativeSource Self}, Path=Background}" />
         <Setter Property="local:RevealElement.MouseOverBorderOpacity" Value="0.1" />
         <Setter Property="local:RevealElement.PressBorderOpacity" Value="0.2" />
@@ -263,12 +260,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
-
-    <Style x:Key="ButtonAccentRevealStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource ButtonRevealStyle}">
-        <Setter Property="local:RevealElement.MouseOverForeground" Value="{DynamicResource SystemAltHighColorBrush}" />
-        <Setter Property="local:RevealElement.MouseOverBackground" Value="{x:Static local:AccentColors.ImmersiveSystemAccentBrush}" />
-        <Setter Property="local:RevealElement.PressTintBrush" Value="{DynamicResource SystemAltLowColorBrush}" />
     </Style>
 
     <Style x:Key="ButtonRoundRevealStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource ButtonRevealStyle}">

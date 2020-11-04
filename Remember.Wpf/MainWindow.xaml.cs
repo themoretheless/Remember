@@ -82,6 +82,11 @@ namespace Remember.Wpf
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();
         }
+
+        private void CardControls_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     public class RelayCommand : ICommand

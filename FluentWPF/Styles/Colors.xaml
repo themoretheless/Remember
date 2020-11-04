@@ -3,7 +3,12 @@
                     xmlns:local="clr-namespace:SourceChord.FluentWPF">
     <ResourceDictionary.MergedDictionaries>
 
-        <local:ResourceDictionaryEx>
+
+
+        <ResourceDictionary Source="pack://application:,,,/FluentWPF;component/Styles/Colors.Dark.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/FluentWPF;component/Styles/Brushes.xaml" />
+
+        <!--<local:ResourceDictionaryEx>
             <local:ResourceDictionaryEx.ThemeDictionaries>
                 <local:ThemeDictionary ThemeName="Light">
                     <local:ThemeDictionary.MergedDictionaries>
@@ -18,6 +23,9 @@
                     </local:ThemeDictionary.MergedDictionaries>
                 </local:ThemeDictionary>
             </local:ResourceDictionaryEx.ThemeDictionaries>
-        </local:ResourceDictionaryEx>
+        </local:ResourceDictionaryEx>-->
+        
+        
+        
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

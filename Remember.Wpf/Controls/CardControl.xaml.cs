@@ -11,5 +11,10 @@ namespace Remember.Wpf.Controls
         {
             InitializeComponent();
         }
+
+        private void Grid_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+
+        }
     }
 }

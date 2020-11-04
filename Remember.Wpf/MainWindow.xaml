@@ -48,8 +48,9 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <controls:CardControls x:Name="CardControls" Opacity="0.9"/>
-
+        <!-- Transparent hack -->
+        <Rectangle Fill="#01000000" Opacity="0.6"/>
+        <controls:CardControls x:Name="CardControls" Opacity="0.9" Loaded="CardControls_Loaded"/>
 
         <Border Grid.Row="1" BorderThickness="1">         
             <Border.BorderBrush>
@@ -62,7 +63,6 @@
                 </Grid.RowDefinitions>
             </Grid>
         </Border>
-
 
         <!--<Border Grid.Row="1" BorderThickness="1" Margin="10">
             <Border.Effect>
