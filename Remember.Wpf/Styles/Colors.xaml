@@ -5,8 +5,8 @@
 
 
 
-        <ResourceDictionary Source="pack://application:,,,/FluentWPF;component/Styles/Colors.Dark.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/FluentWPF;component/Styles/Brushes.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Remember.Wpf;component/Styles/Colors.Dark.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Remember.Wpf;component/Styles/Brushes.xaml" />
 
         <!--<local:ResourceDictionaryEx>
             <local:ResourceDictionaryEx.ThemeDictionaries>

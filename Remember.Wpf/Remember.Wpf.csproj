@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FluentWPF\FluentWPF.csproj" />
     <ProjectReference Include="..\Remember.Comsole\Remember.Console.csproj" />
     <ProjectReference Include="..\Remember.Core\Remember.Core.csproj" />
   </ItemGroup>
@@ -34,6 +33,18 @@
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Brushes.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Styles\Colors.Dark.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Styles\Colors.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Styles\Controls.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
   </ItemGroup>
 
