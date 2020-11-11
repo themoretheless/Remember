@@ -6,13 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="LiteDB" Version="5.0.9" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0-rc.2.20475.5" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0-rc.2.20475.5" />
-    <PackageReference Include="Serilog" Version="2.10.1-dev-01249" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+    <PackageReference Include="Serilog" Version="2.10.1-dev-01256" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.2-dev-10281" />
     <PackageReference Include="Serilog.Sinks.Console" Version="4.0.0-dev-00839" />
     <PackageReference Include="Serilog.Sinks.Debug" Version="1.0.2-dev-00020" />
-    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0-dev-00887" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0-dev-00905" />
   </ItemGroup>
 
 </Project>
