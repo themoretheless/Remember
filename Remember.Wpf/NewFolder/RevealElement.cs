@@ -11,26 +11,17 @@ namespace Remember.Wpf.NewFolder
             DependencyProperty.RegisterAttached("MouseOverBackgroundColor", typeof(Color), typeof(RevealElement),
                 new FrameworkPropertyMetadata(Colors.Transparent, FrameworkPropertyMetadataOptions.Inherits));
 
-
-
         public static Brush GetMouseOverBackground(DependencyObject obj) => (Brush)obj.GetValue(MouseOverBackgroundProperty);
         public static void SetMouseOverBackground(DependencyObject obj, Brush value) => obj.SetValue(MouseOverBackgroundProperty, value);
         public static readonly DependencyProperty MouseOverBackgroundProperty =
             DependencyProperty.RegisterAttached("MouseOverBackground", typeof(Brush), typeof(RevealElement),
                 new FrameworkPropertyMetadata(Brushes.White, FrameworkPropertyMetadataOptions.Inherits));
 
-
-
-
-
-
         public static Brush GetMouseOverForeground(DependencyObject obj) => (Brush)obj.GetValue(MouseOverForegroundProperty);
         public static void SetMouseOverForeground(DependencyObject obj, Brush value) => obj.SetValue(MouseOverForegroundProperty, value);
         public static readonly DependencyProperty MouseOverForegroundProperty =
             DependencyProperty.RegisterAttached("MouseOverForeground", typeof(Brush), typeof(RevealElement),
-                new FrameworkPropertyMetadata(Brushes.Black, FrameworkPropertyMetadataOptions.Inherits));
-
-      
+                new FrameworkPropertyMetadata(Brushes.Black, FrameworkPropertyMetadataOptions.Inherits));      
 
         public static double GetBorderRadius(DependencyObject obj) => (double)obj.GetValue(BorderRadiusProperty);
         public static void SetBorderRadius(DependencyObject obj, double value) => obj.SetValue(BorderRadiusProperty, value);

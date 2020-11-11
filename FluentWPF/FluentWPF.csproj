@@ -31,11 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Styles\Brushes.xaml" />
-    <None Remove="Styles\Button.xaml" />
     <None Remove="Styles\Colors.Dark.xaml" />
     <None Remove="Styles\Colors.xaml" />
     <None Remove="Styles\Controls.xaml" />
-    <None Remove="Themes\Generic.xaml" />
   </ItemGroup>
 
 </Project>
