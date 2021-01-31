@@ -14,7 +14,6 @@ namespace Remember
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-
             if (e.Args.Contains("-debug"))
             {
                 ConsoleHelpers.ShowWindow();
@@ -22,9 +21,6 @@ namespace Remember
 
             IServiceCollection serviceCollection = Bootstrap.Configure();
             serviceCollection.AddLiteDb();
-
-
-
 
             serviceCollection.AddTransient<MainWindow>();
             Provider = serviceCollection.BuildServiceProvider();
